@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="?android:attr/actionModeSelectAllDrawable"
+            android:title="个人信息" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="?android:attr/listChoiceIndicatorMultiple"
+            android:title="悬赏榜单" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="?android:attr/actionModeFindDrawable"
+            android:title="资料库" />
+
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+            android:id="@+id/nav_manage"
+            android:icon="?android:attr/listChoiceIndicatorSingle"
+            android:title="设置" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+    <style>
+	*{padding:0;margin:0;
+  margin-bottom:-10px;}
+	html{overflow:hidden;}
+  </style>
+
+
+<body  style="overflow-x:hidden;overflow-y:hidden;margin-bottom:-10px">
+	<canvas id="canvas" style="background:#111; margin-left:-16px;margin-top: -8px;"></canvas>
+</body >
+	<script type="text/javascript">
+		
+		window.onload = function(){
+			var canvas = document.getElementById("canvas");
+			var context =canvas.getContext("2d");
+			var W = window.innerWidth+16;
+			var H = window.innerHeight+16;
+			canvas.width = W;
+			canvas.height = H;
+			var fontSize = 16;
+			var colunms = Math.floor(W /fontSize);	
+			var drops = [];
+			for(var i=0;i<colunms;i++){
+				drops.push(0);
+			}
+
+			var str ="1010";
+			function draw(){
+				context.fillStyle = "rgba(0,0,0,0.05)";
+				context.fillRect(0,0,W,H);
+				context.font = "300 "+fontSize+"px  微软雅黑";
+				context.fillStyle ="#00cc33";
+				for(var i=0;i<colunms;i++){
+					var index = Math.floor(Math.random() * str.length);
+					var x = i*fontSize;
+					var y = drops[i] *fontSize;
+					context.fillText(str[index],x,y);
+					if(y >= canvas.height && Math.random() > 0.99){
+						drops[i] = 0;
+					}
+					drops[i]++;
+				}
+			};
+
+			function randColor(){
+				var r = Math.floor(Math.random() * 256);
+				var g = Math.floor(Math.random() * 256);
+				var b = Math.floor(Math.random() * 256);
+				return "rgb("+r+","+g+","+b+")";
+			}
+
+			draw();
+			setInterval(draw,30);
+		};
+
+	</script>
+	
+	
+</html>

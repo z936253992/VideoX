@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.liuqi.project_three.Three_web_cent">
+
+    <!-- 获取网站的标题-->
+
+    <Button
+        android:id="@+id/delet_data"
+        android:layout_width="35dp"
+        android:layout_height="25dp"
+        android:alpha="0.7"
+        android:background="@drawable/button_selector"
+       />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textSize="45px"
+            android:maxLength="20"
+            android:textColor="@color/line"
+            android:background="@color/colorPrimary"
+            android:layout_toEndOf="@+id/text_Loading"
+          />
+
+        <ProgressBar
+            android:id="@+id/progressBarex"
+            android:background="@color/colorPrimary"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <!--获取加载进度-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/linearLayout2"
+        android:background="@color/line"
+        android:layout_alignParentStart="true">
+
+        <com.yalantis.phoenix.PullToRefreshView
+            android:id="@+id/pull_to_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/webView1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/text_Loading"
+                android:layout_marginTop="14dp"
+                android:layout_toEndOf="@+id/text_Loading" />
+            <!--显示网页区域-->
+        </com.yalantis.phoenix.PullToRefreshView>
+    </LinearLayout>
+
+</RelativeLayout>

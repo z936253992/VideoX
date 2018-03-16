@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/left_layout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/left_name"
+            android:layout_width="wrap_content"
+            android:textColor="#00c72e"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" />
+
+        <com.github.library.bubbleview.BubbleTextVew
+            android:id="@+id/left_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="#00c72e"
+            app:arrowWidth="8dp"
+            app:angle="8dp"
+            app:arrowHeight="10dp"
+            app:arrowPosition="14dp"
+            app:arrowLocation="left"
+            app:bubbleColor="#107ec0ee"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="end">
+
+        <TextView
+            android:id="@+id/right_name"
+            android:layout_width="wrap_content"
+            android:textColor="#00c72e"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="TextView" />
+
+        <com.github.library.bubbleview.BubbleTextVew
+            android:id="@+id/right_msg"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="#00c72e"
+            app:arrowWidth="8dp"
+            app:angle="8dp"
+            app:arrowHeight="10dp"
+            app:arrowPosition="14dp"
+            app:arrowLocation="right"
+            app:bubbleColor="#107ec0ee"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/left_layoutS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/left_names"
+            android:layout_width="wrap_content"
+            android:textColor="#00c72e"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/left_msgs"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_menu_camera" />
+
+        <com.github.library.bubbleview.BubbleImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/ic_menu_camera"
+            android:visibility="gone"
+            app:angle="6dp"
+            app:arrowHeight="8dp"
+            app:arrowLocation="left"
+            app:arrowPosition="15dp"
+            app:arrowWidth="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right_layoutS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="end">
+
+        <TextView
+            android:id="@+id/right_names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textColor="#00c72e"
+            android:layout_weight="1"
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/right_msgs"
+            android:gravity="right"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_menu_slideshow" />
+
+        <com.github.library.bubbleview.BubbleImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:angle="8dp"
+            app:arrowHeight="10dp"
+            app:arrowLocation="right"
+            app:arrowPosition="14dp"
+            app:arrowWidth="8dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/datalayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end">
+
+        <TextView
+            android:id="@+id/beforedata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#72be84"
+            android:text="TextView" />
+    </LinearLayout>
+</LinearLayout>
